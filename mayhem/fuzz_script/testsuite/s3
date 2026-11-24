@@ -1,0 +1,1 @@
+[%disc%.]%track%. $replace(%title%,a,b)

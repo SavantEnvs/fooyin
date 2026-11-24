@@ -1,0 +1,9 @@
+project: savantenvs/fooyin
+target: fuzz_taglib
+cmds:
+  - cmd: /mayhem/build-fuzz/fuzzers/fuzz_taglib
+    libfuzzer: true
+    timeout: 5
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_taglib/testsuite

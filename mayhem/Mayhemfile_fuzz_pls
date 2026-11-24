@@ -1,0 +1,9 @@
+project: savantenvs/fooyin
+target: fuzz_pls
+cmds:
+  - cmd: /mayhem/build-fuzz/fuzzers/fuzz_pls
+    libfuzzer: true
+    timeout: 5
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_pls/testsuite

@@ -1,0 +1,11 @@
+project: savantenvs/fooyin
+target: fuzz_ffmpeg
+cmds:
+  - cmd: /mayhem/build-fuzz/fuzzers/fuzz_ffmpeg
+    libfuzzer: true
+    timeout: 10
+    env:
+      MFUZZ_COMPAT_LEVEL: '1'
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_ffmpeg/testsuite
